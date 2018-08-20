@@ -2,3 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/nodeapp', '.']
 images: ['gcr.io/$PROJECT_ID/nodeapp']
+artifacts:
+  objects:
+    location: 'gs://cloudbuild-mm/'
+    paths: ['web']
