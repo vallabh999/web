@@ -3,4 +3,4 @@ steps:
   args: ['build', '--tag=gcr.io/$PROJECT_ID/nodeapp', '.']
 images: ['gcr.io/$PROJECT_ID/nodeapp']
 - name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', 'web', 'gs://cloudbuild-mm/web.tgz']
+  args: ['cp', '-rf', '/web.*', 'gs://cloudbuild-mm/web.tgz']
